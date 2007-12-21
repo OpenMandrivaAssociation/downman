@@ -14,6 +14,7 @@ Source10:	%{name}-16.png
 Source11:	%{name}-32.png
 Source12:	%{name}-48.png
 Patch0:		downman-gcc4.patch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 BuildRequires:	automake >= 1.4
 BuildRequires:	libgnome2-devel >= 2.0
