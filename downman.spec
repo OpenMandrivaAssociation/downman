@@ -41,13 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 install -m644 %SOURCE10 -D %{buildroot}/%_miconsdir/%name.png
 install -m644 %SOURCE11 -D %{buildroot}/%_iconsdir/%name.png
 install -m644 %SOURCE12 -D %{buildroot}/%_liconsdir/%name.png
-mkdir -p %{buildroot}/%{_menudir}
-cat << EOF > %{buildroot}/%{_menudir}/%{name}
-?package(%name):command="%{_bindir}/gdownman" icon="%name.png" \
-                needs="X11" section="Networking/File Transfer" \
- title="Downman" longtitle="Download manager" \
-xdg="true"
-EOF
 
 %find_lang %name 
 
@@ -64,7 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,0755)
 %doc NEWS
 %{_bindir}/*
-%_menudir/%name
 #%{_datadir}/locale/*/LC_MESSAGES/*
 %{_iconsdir}/%name.png
 %{_liconsdir}/%name.png
