@@ -3,7 +3,7 @@
 %define release %mkrel 5
 
 Name:		%name
-Summary:	Downman is a download manager for gnome
+Summary:	Download manager for gnome
 Version:	%{version}
 Release:	%{release}
 License:	GPL
