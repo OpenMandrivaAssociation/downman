@@ -1,6 +1,6 @@
 %define name downman
 %define version 0.0.5
-%define release %mkrel 5
+%define release %mkrel 6
 
 Name:		%name
 Summary:	Download manager for gnome
