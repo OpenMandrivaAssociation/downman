@@ -14,6 +14,8 @@ Source10:	%{name}-16.png
 Source11:	%{name}-32.png
 Source12:	%{name}-48.png
 Patch0:		downman-gcc4.patch
+Patch1:		downman-0.0.5-fix-link.patch
+Patch2:		downman-0.0.5-fix-str-fmt.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 BuildRequires:	automake >= 1.4
@@ -29,9 +31,11 @@ It comes with a daemon, a gui and a monitor.
 %prep
 %setup -q
 %patch0 -p0 -b .gcc4
+%patch1 -p0 -b .link
+%patch2 -p0 -b .str
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
