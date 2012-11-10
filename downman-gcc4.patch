@@ -1,0 +1,51 @@
+--- ./clients/gnome/monitor/dmgmonitor.c.old	2005-07-26 08:02:23.740233803 +0200
++++ ./clients/gnome/monitor/dmgmonitor.c	2005-07-26 08:02:41.185431459 +0200
+@@ -277,6 +277,7 @@
+ 			break;
+ 
+ 		default:
++			break;
+ 	}
+ 
+ 	gtk_widget_destroy(dialog);
+--- ./clients/gnome/gdownman/gdownman.c.old	2005-07-26 08:03:32.098008313 +0200
++++ ./clients/gnome/gdownman/gdownman.c	2005-07-26 08:03:46.812175031 +0200
+@@ -781,6 +781,7 @@
+ 			break;
+ 
+ 		default:
++			break;
+ 	}
+ 
+ 	gtk_widget_destroy(dialog);
+--- ./clients/gnome/gdownman/new-url.c.old	2005-07-26 08:04:14.310486602 +0200
++++ ./clients/gnome/gdownman/new-url.c	2005-07-26 08:04:29.844662615 +0200
+@@ -227,6 +227,7 @@
+             break;
+ 
+         default:
++	    break;
+     }
+ 
+     gtk_widget_destroy (GTK_WIDGET (dialog));
+--- ./clients/gnome/gdownman/project.c.old	2005-07-26 08:05:09.836115751 +0200
++++ ./clients/gnome/gdownman/project.c	2005-07-26 08:05:24.049276799 +0200
+@@ -5,7 +5,7 @@
+ #include <utillib.h>
+ 
+ #include "gdownman-marshal.h"
+-#include "gtkcellrendererprogressbar.h"
++//#include "gtkcellrendererprogressbar.h"
+ 
+ #include "project-settings.h"
+ #include "project.h"
+--- ./clients/gnome/gdownman/new-project.c.old	2005-07-26 08:05:46.005525587 +0200
++++ ./clients/gnome/gdownman/new-project.c	2005-07-26 08:05:57.730658447 +0200
+@@ -201,6 +201,7 @@
+             break;
+ 
+         default:
++	    break;
+     }
+ 
+     gtk_widget_destroy (GTK_WIDGET (dialog));

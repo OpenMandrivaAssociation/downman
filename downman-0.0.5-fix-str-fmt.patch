@@ -1,0 +1,49 @@
+--- daemon/downmand.c.str	2010-02-18 16:37:42.000000000 +0100
++++ daemon/downmand.c	2010-02-18 16:37:57.000000000 +0100
+@@ -535,7 +535,7 @@
+         default:
+             g_set_error (&err, DM_DOWNMAND_ERROR, 1,
+                 "Unsupported command: %s", command);
+-            g_print (err->message);
++            g_print ("%s", err->message);
+             break;
+     }
+ 
+--- daemon/main.c.str	2010-02-18 16:36:53.000000000 +0100
++++ daemon/main.c	2010-02-18 16:37:29.000000000 +0100
+@@ -21,7 +21,7 @@
+ 
+     if (downmand_workspace_init (&err))
+     {
+-        g_warning(err->message);
++        g_warning("%s",err->message);
+         return 1;
+     }
+ 
+@@ -33,7 +33,7 @@
+        so clients can connect to the daemon */
+     if (downmand_socket_local_create(downmand, &err))
+     {
+-        g_warning(err->message);
++        g_warning("%s",err->message);
+         return 1;
+     }
+ 
+@@ -55,7 +55,7 @@
+     /* read servers */
+     if (downmand_servers_read (downmand, &err))
+     {
+-        g_warning (err->message);
++        g_warning ("%s",err->message);
+ //FIXME: clean shutdown
+         return 1;
+     }
+@@ -63,7 +63,7 @@
+     /* read projects */
+     if (downmand_projects_read (downmand, &err))
+     {
+-        g_warning (err->message);
++        g_warning ("%s",err->message);
+ //FIXME: clean shutdown
+         return 1;
+     }

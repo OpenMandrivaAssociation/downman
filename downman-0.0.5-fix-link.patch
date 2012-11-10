@@ -1,0 +1,110 @@
+--- clients/cmdline/Makefile.am.link	2003-10-05 17:54:18.000000000 +0200
++++ clients/cmdline/Makefile.am	2010-02-18 16:41:11.000000000 +0100
+@@ -4,9 +4,7 @@
+ 	main.c
+ 
+ downman_LDADD =	\
+-	$(top_srcdir)/utillib/libutil.a
+-
+-downman_LDFLAGS = \
++	$(top_srcdir)/utillib/libutil.a \
+ 	$(DOWNMAN_LIBS)
+ 
+ localedir = $(datadir)/locale
+--- clients/cmdline/Makefile.in.link	2003-10-05 17:54:20.000000000 +0200
++++ clients/cmdline/Makefile.in	2010-02-18 16:41:11.000000000 +0100
+@@ -128,10 +128,7 @@
+ 
+ 
+ downman_LDADD = \
+-	$(top_srcdir)/utillib/libutil.a
+-
+-
+-downman_LDFLAGS = \
++	$(top_srcdir)/utillib/libutil.a \
+ 	$(DOWNMAN_LIBS)
+ 
+ 
+--- clients/gnome/gdownman/Makefile.am.link	2010-02-18 16:43:37.000000000 +0100
++++ clients/gnome/gdownman/Makefile.am	2010-02-18 16:44:20.000000000 +0100
+@@ -42,11 +42,9 @@
+ 	servers.h		\
+ 	$(BUILT_SOURCES)
+ 
+-gdownman_LDFLAGS =				\
+-	$(GDOWNMAN_LIBS)
+-
+ gdownman_LDADD = 				\
+-	$(top_srcdir)/utillib/libutil.a
++	$(top_srcdir)/utillib/libutil.a		\
++	$(GDOWNMAN_LIBS)
+ 
+ localedir = $(datadir)/locale
+ 
+--- clients/gnome/gdownman/Makefile.in.link	2010-02-18 16:43:46.000000000 +0100
++++ clients/gnome/gdownman/Makefile.in	2010-02-18 16:44:36.000000000 +0100
+@@ -168,12 +168,10 @@
+ 	$(BUILT_SOURCES)
+ 
+ 
+-gdownman_LDFLAGS = \
+-	$(GDOWNMAN_LIBS)
+-
+ 
+ gdownman_LDADD = \
+-	$(top_srcdir)/utillib/libutil.a
++	$(top_srcdir)/utillib/libutil.a \
++	$(GDOWNMAN_LIBS)
+ 
+ 
+ localedir = $(datadir)/locale
+--- clients/gnome/monitor/Makefile.am.link	2010-02-18 16:44:48.000000000 +0100
++++ clients/gnome/monitor/Makefile.am	2010-02-18 16:45:17.000000000 +0100
+@@ -5,8 +5,7 @@
+ 	dmgmonitor.c dmgmonitor.h	\
+ 	dmgmonitor_ui.h
+ 
+-downman_gmonitor_LDFLAGS = `pkg-config --libs gtk+-2.0 libgnome-2.0 libgnomeui-2.0`
+-downman_gmonitor_LDADD = $(top_srcdir)/utillib/libutil.a
++downman_gmonitor_LDADD = $(top_srcdir)/utillib/libutil.a `pkg-config --libs gtk+-2.0 libgnome-2.0 libgnomeui-2.0`
+ 
+ localedir = $(datadir)/locale
+ 
+--- clients/gnome/monitor/Makefile.in.link	2010-02-18 16:44:54.000000000 +0100
++++ clients/gnome/monitor/Makefile.in	2010-02-18 16:45:37.000000000 +0100
+@@ -129,8 +129,7 @@
+ 	dmgmonitor_ui.h
+ 
+ 
+-downman_gmonitor_LDFLAGS = `pkg-config --libs gtk+-2.0 libgnome-2.0 libgnomeui-2.0`
+-downman_gmonitor_LDADD = $(top_srcdir)/utillib/libutil.a
++downman_gmonitor_LDADD = $(top_srcdir)/utillib/libutil.a `pkg-config --libs gtk+-2.0 libgnome-2.0 libgnomeui-2.0`
+ 
+ localedir = $(datadir)/locale
+ 
+--- daemon/Makefile.am.link	2003-09-30 22:29:17.000000000 +0200
++++ daemon/Makefile.am	2010-02-18 16:41:11.000000000 +0100
+@@ -22,9 +22,7 @@
+ 	servers.c servers.h	\
+ 	$(BUILT_SOURCES)
+ 
+-downmand_LDADD = $(top_srcdir)/utillib/libutil.a
+-
+-downmand_LDFLAGS = 			\
++downmand_LDADD = $(top_srcdir)/utillib/libutil.a \
+ 	$(DOWNMAN_LIBS)			\
+ 	$(DOWNMAND_LIBS)
+ 
+--- daemon/Makefile.in.link	2003-10-05 17:45:20.000000000 +0200
++++ daemon/Makefile.in	2010-02-18 16:41:11.000000000 +0100
+@@ -148,9 +148,7 @@
+ 	$(BUILT_SOURCES)
+ 
+ 
+-downmand_LDADD = $(top_srcdir)/utillib/libutil.a
+-
+-downmand_LDFLAGS = \
++downmand_LDADD = $(top_srcdir)/utillib/libutil.a \
+ 	$(DOWNMAN_LIBS)			\
+ 	$(DOWNMAND_LIBS)
+ 
