@@ -7,7 +7,7 @@ Summary:	Download manager for gnome
 Version:	%{version}
 Release:	%{release}
 License:	GPL
-Url:		http://downman.sourceforge.net/
+Url:		https://downman.sourceforge.net/
 Group:		Networking/File transfer
 Source0:	%{name}-%{version}.tar.bz2
 Source10:	%{name}-16.png
